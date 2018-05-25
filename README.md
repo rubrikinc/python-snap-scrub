@@ -28,7 +28,7 @@ optional arguments:
                         File Name to Scrub
 ```
 
-## Running the script
+## Running the script - files being scrubbed
 ```
 > python .\snap_scrub.py -c devops1 -v devops-vro -f cron-20180525.bz2
 VM Details
@@ -48,4 +48,14 @@ SLA Domain reassigned for snapshot removal : Unprotected (UNPROTECTED)
 
 SLA Domain reassigned to resume protection : Gold (388a473c-3361-42ab-8f5b-08edb76891f6)
 Complete
+```
+
+## Running the script - files already scrubbed
+```
+python .\snap_scrub.py -c devops1 -v devops-vro -f cron-20180525.bz2
+VM Details
+        VM Name : devops-vro
+        VM ID : VirtualMachine:::fbcb1f51-9520-4227-a68c-6fe145982f48-vm-128
+        SLA : Gold (388a473c-3361-42ab-8f5b-08edb76891f6)
+Snapshots of devops-vro with file cron-20180525.bz2 have been scrub
 ```

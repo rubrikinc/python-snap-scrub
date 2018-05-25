@@ -105,8 +105,13 @@ t_snaps = len(rubrik_get("v1","/vmware/vm/{}/snapshot".format(quote(vm_id)))['da
 
 f_snaps = []
 q_file = rubrik_get("v1","/vmware/vm/{}/search?path={}".format(quote(vm_id),args.filename))
-for r_version in q_file['data'][0]['fileVersions']:
-    f_snaps.append(r_version['snapshotId'])
+if q_file['total'] > 0:
+    for r_version in q_file['data'][0]['fileVersions']:
+        f_snaps.append(r_version['snapshotId'])
+else:
+    print("Snapshots of {} with file {} have been scrubbed".format(args.vm,args.filename))
+    sys.exit(0)
+
 print("Snapshot Details")
 print("\tSnaps for {} : {}".format(args.vm,t_snaps))
 print("\tSnaps with {} : {}".format(args.filename,len(f_snaps)))
