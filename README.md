@@ -52,7 +52,7 @@ Complete
 
 ## Running the script - files already scrubbed
 ```
-python .\snap_scrub.py -c devops1 -v devops-vro -f cron-20180525.bz2
+> python .\snap_scrub.py -c devops1 -v devops-vro -f cron-20180525.bz2
 VM Details
         VM Name : devops-vro
         VM ID : VirtualMachine:::fbcb1f51-9520-4227-a68c-6fe145982f48-vm-128
