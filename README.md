@@ -1,6 +1,10 @@
 # python-snap-scrub  
 This script will search the defined Rubrik cluster for a file on a defined VM. It will then provide feedback on the snapshots in which the file resides. Finally the user has the option to trigger deletes of the relevant snapshots from Rubrik. These deletes then are queued on Rubrik and they will be completely removed from all targets by Rubrik internal processes. 
 
+Note, available as :
+- snap-scrub.py (Python3 Script)
+- snap-scrub.exe (Windows Binary)
+
 ## Setup .creds within the script path
 ```
 {
